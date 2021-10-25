@@ -6,6 +6,10 @@ import { ErrorService } from './services/error.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatButtonModule} from '@angular/material/button';
+import { AuthService } from '../login/auth.service';
+
 
 
 
@@ -18,8 +22,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeRoutingModule,
     HttpClientModule,
     MatTableModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
-  providers:[ErrorService]
+  providers:[ErrorService,AuthService]
 })
 export class HomeModule { }
